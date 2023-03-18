@@ -1,0 +1,30 @@
+[
+  {
+    "skill_image": "../images/html-5.png",
+    "skill_title": "HTML"
+  },
+  {
+    "skill_image": "../images/css3.png",
+    "skill_title": "CSS"
+  },
+  {
+    "skill_image": "../images/javascript.png",
+    "skill_title": "JavaScript"
+  },
+  {
+    "skill_image": "../images/bootstrap.png",
+    "skill_title": "Bootstrap"
+  },
+  {
+    "skill_image": "../images/ReactJs.png",
+    "skill_title": "React JS"
+  },
+  {
+    "skill_image": "../images/Git-Icon.png",
+    "skill_title": "Git"
+  },
+  {
+    "skill_image": "../images/github-logo.png",
+    "skill_title": "GitHub"
+  }
+]

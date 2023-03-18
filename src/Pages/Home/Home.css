@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@100;200;300&family=Roboto:wght@100;300;400;500;700;900&family=Work+Sans:wght@300;400;700;900&display=swap");
+
+.text-contant h1 {
+  font-weight: bold;
+  color: rgb(82, 81, 81);
+  font-family: "Archivo Black", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Work Sans", sans-serif;
+}
+.text-animated {
+  margin-left: 0.6rem;
+  color: purple;
+}
+.text {
+  color: rgb(118, 116, 116);
+}
+.home-description {
+  color: rgb(48, 48, 48);
+}
+.download-Resume-button {
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  background-color: rgb(93, 21, 93);
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
+  position: relative;
+}
+
+.download-animation-icons {
+  animation-name: download;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  z-index: 33;
+  position: absolute;
+}
+@keyframes download {
+  from {
+    font-size: 1.2rem;
+  }
+  to {
+    font-size: 2rem;
+  }
+}
+.download-Resume-button:hover {
+  background-color: skyblue;
+  color: rgb(48, 48, 48);
+  transform: scaleX(0.9);
+}
+.download-lottie-image {
+  width: 3.1rem;
+}
+.social-media-component {
+  padding: 0;
+  margin: 0;
+}
+.social-media-tag {
+  display: inline-block;
+}
+.social-media-handle {
+  color: #446eac;
+  padding: 0.7rem;
+
+  border-radius: 50%;
+  margin: 0.4rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+}
+.social-media-handle:hover {
+  background-color: #446eac;
+
+  color: white;
+}
+/* ========================  Tablets ================ */
+@media only screen and (min-width: 768px) {
+  /* tablets and desktop */
+  .home-page {
+    margin-top: 100px;
+  }
+
+  .home-description {
+    width: 70%;
+  }
+  .text-contant h1 {
+    font-weight: bold;
+    color: rgb(82, 81, 81);
+    font-family: "Archivo Black", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.8rem;
+  }
+}
+
+/* ============================ Phones =============== */
+@media only screen and (max-width: 767px) {
+  /* phones */
+  .mobile-margin {
+    margin-top: 50px;
+  }
+  .home-page {
+    margin-bottom: 140px;
+  }
+  .text-contant h1 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(82, 81, 81);
+    font-family: "Archivo Black", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-family: "Work Sans", sans-serif;
+  }
+  .text-animated {
+    margin-left: 0.4rem;
+    color: purple;
+  }
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}

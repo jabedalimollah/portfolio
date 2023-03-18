@@ -1,0 +1,213 @@
+/* Google font */
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+.about-us-page {
+  margin-bottom: 140px;
+}
+.name {
+  font-weight: bold;
+  font-size: 3rem;
+
+  background: linear-gradient(90deg, #000000d4, #7f0381);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation-name: nameAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes nameAnimation {
+  0% {
+    font-weight: bold;
+    font-size: 3rem;
+    background: linear-gradient(90deg, #2d2c2cd4, #bb04be);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25% {
+    font-weight: bold;
+    font-size: 3rem;
+    background: linear-gradient(180deg, #2d2c2cd4, #bb04be);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    font-weight: bold;
+    font-size: 3rem;
+    background: linear-gradient(270deg, #2d2c2cd4, #bb04be);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  75% {
+    font-weight: bold;
+    font-size: 3rem;
+    background: linear-gradient(3600deg, #2d2c2cd4, #bb04be);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    font-weight: bold;
+    font-size: 3rem;
+    background: linear-gradient(0deg, #2d2c2cd4, #bb04be);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.degree {
+  font-weight: bold;
+  color: purple;
+}
+.profile-pic {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  box-shadow: 8px 5px 9px rgba(0, 0, 0, 0.399);
+
+  animation-name: profileAnimations;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  filter: grayscale(100%);
+}
+.profile-pic:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+@keyframes profileAnimation {
+  /* 0% {
+    background-color: rgba(251, 167, 167, 0.607);
+  }
+  25% {
+    background-color: rgba(255, 255, 166, 0.636);
+  }
+  50% {
+    background-color: rgba(164, 164, 255, 0.549);
+  }
+  100% {
+    background-color: rgba(182, 251, 182, 0.419);
+  } */
+  from {
+    /* background-color: rgba(251, 167, 167, 0.607); */
+  }
+  to {
+    /* background-color: rgba(182, 251, 182, 0.419); */
+    filter: grayscale(100%);
+  }
+}
+.s {
+  position: relative;
+}
+.hover-me {
+  position: absolute;
+  top: 80%;
+  z-index: 20;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+}
+.skill-image {
+  width: 80%;
+}
+.skills-tag {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+
+  color: #433a45;
+  text-shadow: 2px 3px 6px grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.age,
+.email,
+.phone,
+.place {
+  color: purple;
+
+  font-weight: bold;
+}
+.skill-box {
+  box-shadow: 5px 6px 6px black;
+
+  background-color: white;
+  border-radius: 10%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+}
+.skill-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.skill-box:hover {
+  transform: scale(0.9);
+}
+.education {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+
+  color: purple;
+  text-shadow: 2px 3px 6px grey;
+}
+.education-box {
+  transition: transform 0.2s;
+}
+.education-box:hover {
+  transform: scale(1.1);
+}
+.education-details {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.institution-pic {
+  height: 150px;
+}
+.institution-pic img {
+  width: 100%;
+  height: 100%;
+}
+.institute-degree {
+  font-weight: bold;
+  color: rgb(3, 3, 111);
+}
+.institute-name {
+  color: rgb(85, 84, 84);
+  font-weight: bold;
+}
+.passing-year {
+  font-weight: bold;
+  color: rgb(5, 69, 5);
+}
+@media only screen and (min-width: 768px) {
+  /* tablets and desktop */
+}
+
+@media only screen and (max-width: 767px) {
+  /* phones */
+  .institute-degree {
+    font-weight: bold;
+    color: rgb(3, 3, 111);
+    font-size: 1.2rem;
+  }
+  .institute-name {
+    color: rgb(85, 84, 84);
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+  .passing-year {
+    font-weight: bold;
+    color: rgb(5, 69, 5);
+    font-size: 1rem;
+  }
+}

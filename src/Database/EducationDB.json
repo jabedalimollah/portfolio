@@ -1,0 +1,20 @@
+[
+  {
+    "institution_pic": "../images/Abs academy of polytechnic.jpeg",
+    "institute_degree": " Diploma in Computer Science and Technology",
+    "institute_name": "ABS Academy of Polytechnic | WBSCT&VE&SD",
+    "passing_year": "2019-2022 | Completed"
+  },
+  {
+    "institution_pic": "../images/hat-ashuria-high-school.jpg",
+    "institute_degree": " Higher Secondary",
+    "institute_name": "Hat-Ashuria High School | WBCHSE",
+    "passing_year": "2018 | Completed"
+  },
+  {
+    "institution_pic": "../images/hat-ashuria-high-school.jpg",
+    "institute_degree": " Secondary",
+    "institute_name": "Hat-Ashuria High School | WBBSE",
+    "passing_year": "2016 | Completed"
+  }
+]

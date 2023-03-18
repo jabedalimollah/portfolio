@@ -1,38 +1,142 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.text-purple {
+  color: purple;
+}
+.page-title {
   text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #433a45;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  animation-name: examples;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+    0px -5px 35px rgba(255, 255, 255, 0.3);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
 }
-
-.App-link {
-  color: #61dafb;
+.slide-line {
+  width: 2%;
+  height: 6px;
+  /* background-color: purple; */
+  background-image: linear-gradient(90deg, #433a45 2%, purple 98%);
+  animation-name: slideanimations;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  margin-top: 9px;
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+    0px -5px 35px rgba(255, 255, 255, 0.3);
 }
-
-@keyframes App-logo-spin {
+@keyframes slideanimations {
   from {
-    transform: rotate(0deg);
+    width: 2%;
   }
   to {
-    transform: rotate(360deg);
+    width: 15%;
+  }
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* ========================  Tablets ================ */
+@media only screen and (min-width: 768px) {
+  /* tablets and desktop */
+  .slide-line {
+    width: 2%;
+    height: 6px;
+    /* background-color: purple; */
+    background-image: linear-gradient(90deg, #433a45 2%, purple 98%);
+    animation-name: slideanimations;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    margin-top: 9px;
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+      0px -5px 35px rgba(255, 255, 255, 0.3);
+  }
+  @keyframes slideanimations {
+    from {
+      width: 2%;
+    }
+    to {
+      width: 25%;
+    }
+  }
+}
+
+/* ============================ Phones =============== */
+@media only screen and (max-width: 767px) {
+  /* phones */
+  .page-title {
+    text-align: center;
+
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #433a45;
+    animation-name: examples;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+      0px -5px 35px rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .slide-line {
+    width: 2%;
+    height: 4px;
+    /* background-color: purple; */
+    background-image: linear-gradient(90deg, #433a45 2%, purple 98%);
+
+    animation-name: slideanimations;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    margin-top: 9px;
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+      0px -5px 35px rgba(255, 255, 255, 0.3);
+  }
+  @keyframes slideanimations {
+    from {
+      width: 2%;
+    }
+    to {
+      width: 45%;
+    }
   }
 }

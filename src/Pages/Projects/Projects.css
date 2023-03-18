@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Coiny&family=Poppins:wght@100;200;300&family=Roboto:wght@100;300;400;500;700;900&family=Work+Sans:wght@300;400;700;900&display=swap");
+.projects-page {
+  margin-bottom: 140px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 6%;
+}
+
+.project-name {
+  font-weight: bold;
+
+  background: linear-gradient(90deg, #000000d4, #7f0381);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: capitalize;
+}
+.project-image-box {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(242, 242, 242);
+  border-radius: 6%;
+
+  box-shadow: rgba(0, 0, 0, 0.418) 5px 5px 8px;
+}
+.project-image-box:hover {
+  opacity: 0;
+}
+
+.project-info-1 {
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+
+  border-radius: 6%;
+  background-color: rgb(226, 221, 221);
+  box-shadow: 5px 6px 9px gray inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.live-button {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+
+  border: 1px solid green;
+
+  color: green;
+  border-radius: 10%;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  cursor: pointer;
+}
+.live-button:hover {
+  background-color: green;
+  color: white;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.info-default-style {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+}
+.info-description {
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  position: absolute;
+  top: 0;
+  border-radius: 6%;
+  background-color: rgb(226, 221, 221);
+  box-shadow: 5px 6px 9px gray inset;
+  padding: 1rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+.info-para {
+  height: 100%;
+  margin-top: 15px;
+
+  padding: 9px;
+  overflow: auto;
+}
+.info-para::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.info-para::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.info-para::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+.info-para::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.info-close-btn {
+  background-color: rgb(139, 14, 14);
+  border: none;
+  padding: 0.1rem 0.2rem;
+  color: white;
+  align-self: flex-end;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+}
+.info-close-btn:hover {
+  transform: scale(1.1);
+}
+/* ------------------- */
+.project-image-tag {
+  height: 300px;
+  border-radius: 6%;
+  padding: 0;
+  position: relative;
+
+  background-size: cover;
+
+  background-origin: padding-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.418) 5px 5px 8px;
+}
+.project-image-tag:hover .project-info {
+  height: 100%;
+}
+.project-info {
+  width: 100%;
+
+  height: 0%;
+
+  opacity: 0;
+
+  border-radius: 6%;
+  background-color: rgb(226, 221, 221);
+  box-shadow: 5px 6px 9px gray inset;
+  transition: all 1s;
+}
+.project-info:hover {
+  opacity: 1;
+}
+.get-info-button {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+
+  border: 1px solid gray;
+
+  color: grey;
+  border-radius: 10%;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.get-info-button:hover {
+  background-color: gray;
+  color: white;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+/* ========================  Tablets ================ */
+@media only screen and (min-width: 768px) {
+  /* tablets and desktop */
+  .project-image-tag {
+    height: 350px;
+
+    border-radius: 6%;
+    padding: 0;
+    position: relative;
+
+    background-size: cover;
+
+    background-origin: padding-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.418) 5px 5px 8px;
+  }
+}
+
+/* ============================ Phones =============== */
+@media only screen and (max-width: 767px) {
+  /* phones */
+}

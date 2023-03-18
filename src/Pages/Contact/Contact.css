@@ -1,0 +1,85 @@
+.contact_info {
+  /* margin-bottom: 120px; */
+  margin-bottom: 20px;
+}
+.contact-icons {
+  width: 50px;
+}
+.contact-info-item {
+  background-color: white;
+  box-shadow: 3px 3px 6px rgb(237, 236, 236);
+}
+.contact-info-item:hover {
+  box-shadow: 3px 3px 6px rgb(121, 121, 121);
+  transform: scale(1.1);
+}
+.contact-info-tile {
+  font-weight: bold;
+}
+.contact-form-title {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.contact-message-box {
+  height: 150px;
+}
+.contact-form-data {
+  background-color: white;
+  /* box-shadow: 3px 3px 6px rgb(237, 236, 236); */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.contact-phone,
+.contact-name,
+.contact-email,
+.contact-message-box {
+  width: 99%;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+}
+
+.contact-phone:hover,
+.contact-name:hover,
+.contact-email:hover,
+.contact-message-box:hover {
+  border: none;
+  outline: none;
+}
+.contact-message {
+  border: 1px solid gray;
+}
+.contact-message-box {
+  border: none;
+}
+.contact-submit-button {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  background-color: rgb(248, 233, 214);
+  font-weight: bold;
+  color: rgb(74, 74, 74);
+}
+.contact-submit-button:hover {
+  transform: scaleX(0.9);
+}
+.contact-form-name,
+.contact-form-email,
+.contact-form-phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+}
+.contact-react-icon {
+  font-size: 1.5rem;
+  color: rgb(96, 95, 95);
+}
+.contact-lottie-image {
+  height: 90%;
+}
+.get-in-touch-title {
+  font-size: 2rem !important;
+}
