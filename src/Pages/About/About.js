@@ -137,7 +137,7 @@ const About = () => {
               <div className="info row d-flex  flex-row">
                 <div className="col-lg-6">
                   <div className="">
-                    <span className="age">Age : </span>{" "}
+                    <span className="age">Date of Birth : </span>{" "}
                     <span>
                       {data.age}
                       {/* 23 */}

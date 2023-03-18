@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
@@ -10,6 +11,15 @@ import Projects from "./Pages/Projects/Projects";
 import UnderConstruction from "./Pages/UnderConstruction/UnderConstruction";
 
 function App() {
+  useEffect(() => {
+    const handleContextmenu = (e) => {
+      e.preventDefault();
+    };
+    document.addEventListener("contextmenu", handleContextmenu);
+    return function cleanup() {
+      document.removeEventListener("contextmenu", handleContextmenu);
+    };
+  }, []);
   return (
     <>
       <BrowserRouter>
