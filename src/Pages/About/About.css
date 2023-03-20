@@ -115,7 +115,7 @@
   font-size: 1.2rem;
 }
 .skill-image {
-  width: 80%;
+  width: 50%;
 }
 .skills-tag {
   text-align: center;
@@ -140,7 +140,8 @@
 }
 .skill-box {
   box-shadow: 5px 6px 6px black;
-
+  height: 150px;
+  width: 150px;
   background-color: white;
   border-radius: 10%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
@@ -150,7 +151,9 @@
   font-size: 1rem;
 }
 .skill-box:hover {
-  transform: scale(0.9);
+  background-color: antiquewhite;
+  box-shadow: 0 5px 10px rgba(32, 22, 221, 0.25),
+    0 5px 10px rgba(102, 95, 238, 0.22);
 }
 .education {
   text-align: center;
@@ -191,10 +194,25 @@
 }
 @media only screen and (min-width: 768px) {
   /* tablets and desktop */
+  .skill-box {
+    box-shadow: 5px 6px 6px black;
+    height: 150px;
+    background-color: white;
+    border-radius: 10%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+  }
 }
 
 @media only screen and (max-width: 767px) {
   /* phones */
+  .skill-box {
+    box-shadow: 5px 6px 6px black;
+    height: 120px;
+    width: 120px;
+    background-color: white;
+    border-radius: 10%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+  }
   .institute-degree {
     font-weight: bold;
     color: rgb(3, 3, 111);

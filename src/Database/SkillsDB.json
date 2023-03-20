@@ -26,5 +26,17 @@
   {
     "skill_image": "../images/github-logo.png",
     "skill_title": "GitHub"
+  },
+  {
+    "skill_image": "../images/redux.png",
+    "skill_title": "Redux"
+  },
+  {
+    "skill_image": "../images/Axios.png",
+    "skill_title": "Axios"
+  },
+  {
+    "skill_image": "../images/jquery.png",
+    "skill_title": "Jquery"
   }
 ]
