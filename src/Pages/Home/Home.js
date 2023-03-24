@@ -5,7 +5,10 @@ import { loadFull } from "tsparticles";
 import Lottie from "lottie-react";
 import Typewriter from "typewriter-effect";
 import HomePage from "../../images/HomePage.json";
-
+// import astronaut from "../../images/31631-astronautcopy.json";
+// import astronaut from "../../images/lf20_uya4kd2o.json";
+import astronaut from "../../images/119142-astronaut-blue-rocket.json";
+// import astronaut from "../../images/91574-astronaut-illustration.json";
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
@@ -15,12 +18,14 @@ import DownloadForm from "../../Components/HomeComponent/DownloadForm/DownloadFo
 import HomeDB from "../../Database/HomeDB.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useSelector } from "react-redux";
 
 const Home = () => {
   const [data, setData] = useState({});
   const [text, setText] = useState([]);
 
   const [downloadFormCondition, setDownloadFormCondition] = useState(false);
+  const theme = useSelector((state) => state.theme.value);
   const closeDownloadFormButton = () => {
     setDownloadFormCondition(false);
   };
@@ -37,79 +42,156 @@ const Home = () => {
 
   return (
     <>
-      <div className="home-page ">
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={{
-            fpsLimit: 120,
-            interactivity: {
-              events: {
-                onClick: {
-                  enable: false,
-                  mode: "push",
+      <div
+        className={`home-page ${theme ? "home-page-dark" : "home-page-light"}`}
+      >
+        {theme ? (
+          <Particles
+            id="tsparticles"
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options={{
+              fpsLimit: 120,
+              interactivity: {
+                events: {
+                  onClick: {
+                    enable: false,
+                    mode: "push",
+                  },
+                  onHover: {
+                    enable: true,
+                    mode: "repulse",
+                  },
+                  resize: true,
                 },
-                onHover: {
+                modes: {
+                  push: {
+                    quantity: 4,
+                  },
+                  repulse: {
+                    distance: 200,
+                    duration: 0.4,
+                  },
+                },
+              },
+              particles: {
+                color: {
+                  value: "#4D455D",
+                },
+                links: {
+                  color: "#191825",
+                  distance: 150,
                   enable: true,
-                  mode: "repulse",
+                  opacity: 0.5,
+                  width: 1,
                 },
-                resize: true,
-              },
-              modes: {
-                push: {
-                  quantity: 4,
-                },
-                repulse: {
-                  distance: 200,
-                  duration: 0.4,
-                },
-              },
-            },
-            particles: {
-              color: {
-                value: "#4D455D",
-              },
-              links: {
-                color: "#191825",
-                distance: 150,
-                enable: true,
-                opacity: 0.5,
-                width: 1,
-              },
-              collisions: {
-                enable: true,
-              },
-              move: {
-                directions: "none",
-                enable: true,
-                outModes: {
-                  default: "bounce",
-                },
-                random: false,
-                speed: 2,
-                straight: false,
-              },
-              number: {
-                density: {
+                collisions: {
                   enable: true,
-                  area: 800,
                 },
-                value: 60,
+                move: {
+                  directions: "none",
+                  enable: true,
+                  outModes: {
+                    default: "bounce",
+                  },
+                  random: false,
+                  speed: 2,
+                  straight: false,
+                },
+                number: {
+                  density: {
+                    enable: true,
+                    area: 800,
+                  },
+                  value: 60,
+                },
+                opacity: {
+                  value: 0.5,
+                },
+                shape: {
+                  type: "star",
+                },
+                size: {
+                  value: { min: 1, max: 5 },
+                },
               },
-              opacity: {
-                value: 0.5,
+              detectRetina: true,
+            }}
+          />
+        ) : (
+          <Particles
+            id="tsparticles"
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options={{
+              fpsLimit: 120,
+              interactivity: {
+                events: {
+                  onClick: {
+                    enable: false,
+                    mode: "push",
+                  },
+                  onHover: {
+                    enable: true,
+                    mode: "repulse",
+                  },
+                  resize: true,
+                },
+                modes: {
+                  push: {
+                    quantity: 4,
+                  },
+                  repulse: {
+                    distance: 200,
+                    duration: 0.4,
+                  },
+                },
               },
-              shape: {
-                type: "circle",
+              particles: {
+                color: {
+                  value: "#4D455D",
+                },
+                links: {
+                  color: "#191825",
+                  distance: 150,
+                  enable: true,
+                  opacity: 0.5,
+                  width: 1,
+                },
+                collisions: {
+                  enable: true,
+                },
+                move: {
+                  directions: "none",
+                  enable: true,
+                  outModes: {
+                    default: "bounce",
+                  },
+                  random: false,
+                  speed: 2,
+                  straight: false,
+                },
+                number: {
+                  density: {
+                    enable: true,
+                    area: 800,
+                  },
+                  value: 60,
+                },
+                opacity: {
+                  value: 0.5,
+                },
+                shape: {
+                  type: "circle",
+                },
+                size: {
+                  value: { min: 1, max: 5 },
+                },
               },
-              size: {
-                value: { min: 1, max: 5 },
-              },
-            },
-            detectRetina: true,
-          }}
-        />
+              detectRetina: true,
+            }}
+          />
+        )}
         <div className="container mobile-margin">
           <div className="row d-flex justify-content-center">
             <div
@@ -117,13 +199,23 @@ const Home = () => {
               data-aos="fade-right"
             >
               <div className="text-contant ">
-                <h3 className="text">
+                <h3
+                  className={
+                    theme ? "home-firsttext-dark " : "home-firsttext-light"
+                  }
+                >
                   {/* Hello */}
                   {data.text}
                 </h3>
-                <h1 className="d-flex  flex-row align-items-center">
+                <h1 className={`d-flex  flex-row align-items-center `}>
                   {/* I'm */}
-                  <span>{data.static_text}</span>
+                  <span
+                    className={
+                      theme ? "home-secondtext-dark" : "home-secondtext-light"
+                    }
+                  >
+                    {data.static_text}
+                  </span>
 
                   <span className="text-animated">
                     <Typewriter
@@ -137,13 +229,21 @@ const Home = () => {
                   </span>
                 </h1>
               </div>{" "}
-              <p className="home-description">
+              <p
+                className={`home-description ${
+                  theme ? "home-description-dark " : "home-description-light"
+                }`}
+              >
                 {/* My name is Jabed Ali Mollah. */}
                 {data.home_description}
               </p>
               <button
                 onClick={() => setDownloadFormCondition(true)}
-                className="download-Resume-button"
+                className={`download-Resume-button ${
+                  theme
+                    ? "download-Resume-button-dark"
+                    : "download-Resume-button-light"
+                }`}
                 // download="Jabed Ali Mollah"
               >
                 <MdFileDownload
@@ -156,46 +256,62 @@ const Home = () => {
                 </span>
               </button>
               <ul className="social-media-component mt-5">
-                <li className="social-media-tag">
+                <li className={`social-media-tag `}>
                   <a
                     // href="https://www.instagram.com/iam_sharif7/"
                     href={data.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="social-media-handle"
+                    className={`social-media-handle ${
+                      theme
+                        ? "social-media-handle-dark"
+                        : "social-media-handle-light"
+                    }`}
                   >
                     <BsInstagram />
                   </a>
                 </li>
-                <li className="social-media-tag">
+                <li className={`social-media-tag`}>
                   <a
                     // href="http://"
                     href={data.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="social-media-handle"
+                    className={`social-media-handle ${
+                      theme
+                        ? "social-media-handle-dark"
+                        : "social-media-handle-light"
+                    }`}
                   >
                     <FaFacebookF />
                   </a>
                 </li>
-                <li className="social-media-tag">
+                <li className={`social-media-tag `}>
                   <a
                     // href="http://"
                     href={data.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="social-media-handle"
+                    className={`social-media-handle ${
+                      theme
+                        ? "social-media-handle-dark"
+                        : "social-media-handle-light"
+                    }`}
                   >
                     <BsGithub />
                   </a>
                 </li>
-                <li className="social-media-tag">
+                <li className={`social-media-tag `}>
                   <a
                     // href="http://"
                     href={data.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="social-media-handle"
+                    className={`social-media-handle ${
+                      theme
+                        ? "social-media-handle-dark"
+                        : "social-media-handle-light"
+                    }`}
                   >
                     <BsLinkedin />
                   </a>
@@ -203,7 +319,17 @@ const Home = () => {
               </ul>
             </div>
             <div className="col-lg-6 d-flex justify-content-center flex-column align-items-center">
-              <Lottie animationData={HomePage} className="Home-lottie-image" />
+              {theme ? (
+                <Lottie
+                  animationData={astronaut}
+                  className="Home-lottie-image"
+                />
+              ) : (
+                <Lottie
+                  animationData={HomePage}
+                  className="Home-lottie-image"
+                />
+              )}
             </div>
           </div>
         </div>{" "}

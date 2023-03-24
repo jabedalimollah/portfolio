@@ -4,6 +4,7 @@ import { HiUser } from "react-icons/hi";
 import { IoIosLock } from "react-icons/io";
 
 import { ImDownload2 } from "react-icons/im";
+import { useSelector } from "react-redux";
 let userName = "sharifali";
 let myPassword = "admin123";
 const DownloadForm = ({ closeDownloadFormButton }) => {
@@ -13,6 +14,7 @@ const DownloadForm = ({ closeDownloadFormButton }) => {
   });
   const [buttonCondition, setButtonCondition] = useState(true);
   const [error, setError] = useState(false);
+  const theme = useSelector((state) => state.theme.value);
   const handleOnchange = (e) => {
     setInputBox({ ...inputbox, [e.target.name]: e.target.value });
     setButtonCondition(true);
@@ -27,15 +29,27 @@ const DownloadForm = ({ closeDownloadFormButton }) => {
   };
   return (
     <>
-      <div className="download-form-box ">
+      <div
+        className={`download-form-box ${
+          theme ? "download-form-box-dark" : "download-form-box-light"
+        }`}
+      >
         <div className="container ">
           <div className="row download-form-childbox">
             <div className="col-lg-4">
               <div className="row">
                 <div className="col-md-12 ">
-                  <form className="download-form">
+                  <form
+                    className={`download-form ${
+                      theme ? "download-form-dark" : "download-form-light"
+                    }`}
+                  >
                     <button
-                      className="form-cv-close-button"
+                      className={`form-cv-close-button ${
+                        theme
+                          ? "form-cv-close-button-dark"
+                          : "form-cv-close-button-light"
+                      }`}
                       onClick={() => closeDownloadFormButton()}
                     >
                       x
@@ -56,7 +70,11 @@ const DownloadForm = ({ closeDownloadFormButton }) => {
                       </label>
                       <input
                         type="text"
-                        className="download-input-tag"
+                        className={`download-input-tag  ${
+                          theme
+                            ? "download-input-tag-dark"
+                            : "download-input-tag-light"
+                        }`}
                         placeholder="Enter User Name"
                         autoComplete={"false"}
                         name="username"
@@ -79,7 +97,11 @@ const DownloadForm = ({ closeDownloadFormButton }) => {
                       </label>
                       <input
                         type="password"
-                        className="download-input-tag"
+                        className={`download-input-tag ${
+                          theme
+                            ? "download-input-tag-dark"
+                            : "download-input-tag-light"
+                        }`}
                         placeholder="Enter Password"
                         autoComplete={"false"}
                         name="password"
@@ -93,7 +115,13 @@ const DownloadForm = ({ closeDownloadFormButton }) => {
                           className="download-cv-button "
                           onClick={handleDownloadButton}
                         >
-                          <span className="download-cv-link">
+                          <span
+                            className={`download-cv-link ${
+                              theme
+                                ? "download-cv-link-dark"
+                                : "download-cv-link-light"
+                            }`}
+                          >
                             <ImDownload2
                               style={{ fontSize: "1.1rem", marginRight: "5px" }}
                             />{" "}
@@ -105,7 +133,12 @@ const DownloadForm = ({ closeDownloadFormButton }) => {
                           <a
                             href="../Resume/Jabed Ali Mollah Resume.pdf"
                             download="Jabed Ali Mollah Resume"
-                            className="download-cv-link"
+                            // className="download-cv-link"
+                            className={`download-cv-link ${
+                              theme
+                                ? "download-cv-link-dark"
+                                : "download-cv-link-light"
+                            }`}
                           >
                             <ImDownload2
                               style={{ fontSize: "1.1rem", marginRight: "5px" }}

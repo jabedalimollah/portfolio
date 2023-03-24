@@ -10,12 +10,14 @@ import EducationDB from "../../Database/EducationDB.json";
 import SkillsDB from "../../Database/SkillsDB.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useSelector } from "react-redux";
 const About = () => {
   const [text, setText] = useState();
 
   const [data, setData] = useState({});
   const [educationData, setEducationData] = useState([]);
   const [skillsData, setSkillsData] = useState([]);
+  const theme = useSelector((state) => state.theme.value);
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
@@ -31,8 +33,12 @@ const About = () => {
 
   return (
     <>
-      <div className="about-us-page ">
-        <div className="container mt-5 ">
+      <div
+        className={`about-us-page py-5 ${
+          theme ? "about-us-page-dark" : "about-us-page-light"
+        }`}
+      >
+        <div className="container  ">
           <Particles
             id="tsparticles"
             init={particlesInit}
@@ -112,7 +118,7 @@ const About = () => {
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
             >
-              <h2 className="name ">
+              <h2 className={`name ${theme ? "name-dark" : "name-light"}`}>
                 {data.name}
                 {/* Jabed Ali Mollah */}
               </h2>
@@ -126,7 +132,11 @@ const About = () => {
                   }}
                 />
               </h5>
-              <p className="about-description">
+              <p
+                className={`about-description ${
+                  theme ? "about-description-dark" : "about-description-light"
+                }`}
+              >
                 {data.about_description}
                 {/* Hi, I’m a Front-End developer. I spend my whole day, practically
                 every day, experimenting with HTML, CSS, JavaScript, Bootstrap
@@ -138,7 +148,13 @@ const About = () => {
                 <div className="col-lg-6">
                   <div className="">
                     <span className="age">Date of Birth : </span>{" "}
-                    <span>
+                    <span
+                      className={` ${
+                        theme
+                          ? "about-description-dark"
+                          : "about-description-light"
+                      }`}
+                    >
                       {data.age}
                       {/* 23 */}
                     </span>
@@ -147,7 +163,13 @@ const About = () => {
                 <div className="col-lg-6">
                   <div className="">
                     <span className="email">Email : </span>
-                    <span>
+                    <span
+                      className={` ${
+                        theme
+                          ? "about-description-dark"
+                          : "about-description-light"
+                      }`}
+                    >
                       {data.email}
                       {/* jabedalimollah7@gmail.com */}
                     </span>
@@ -157,7 +179,13 @@ const About = () => {
                   <div className="">
                     {" "}
                     <span className="phone">Phone : </span>{" "}
-                    <span>
+                    <span
+                      className={` ${
+                        theme
+                          ? "about-description-dark"
+                          : "about-description-light"
+                      }`}
+                    >
                       {data.phone}
                       {/* +91 629-596-5896 */}
                     </span>
@@ -168,7 +196,13 @@ const About = () => {
                   <div className="">
                     {" "}
                     <span className="place">Place : </span>{" "}
-                    <span>
+                    <span
+                      className={` ${
+                        theme
+                          ? "about-description-dark"
+                          : "about-description-light"
+                      }`}
+                    >
                       {data.place}
                       {/* Bankura, West Bengal, India */}
                     </span>
@@ -183,7 +217,9 @@ const About = () => {
               <img
                 src={AboutDB.profile_pic}
                 alt="profile-pic"
-                className="profile-pic"
+                className={`profile-pic ${
+                  theme ? "profile-pic-dark" : "profile-pic-light"
+                }`}
               />
             </div>
           </div>
@@ -192,14 +228,20 @@ const About = () => {
           <div>
             My <span className="text-purple">Skills</span>
           </div>
-          <div className="slide-line"></div>
+          <div
+            className={`slide-line ${
+              theme ? "slide-line-dark" : "slide-line-light "
+            }`}
+          ></div>
         </h3>
         <div className="container mt-3 mb-5">
           <div className="row  d-flex   justify-content-center align-items-center">
             {skillsData.map((items, index) => {
               return (
                 <div
-                  className="col-md-2 mx-md-4 my-md-3 mt-3 col-5 mx-2 skill-box d-flex flex-column   justify-content-center align-items-center"
+                  className={`col-md-2 mx-md-4 my-md-3 mt-3 col-5 mx-2 skill-box d-flex flex-column   justify-content-center align-items-center ${
+                    theme ? "skill-box-dark " : "skill-box-light"
+                  }`}
                   data-aos="zoom-in"
                   key={index}
                 >
@@ -216,25 +258,41 @@ const About = () => {
             })}
           </div>
         </div>
-        <div className="container">
+        <div className="container u-margin-bottom">
           {/* <h3 className="education"> My Education</h3> */}
           <h3 className="page-title mt-5 my-4">
             <div>
               My <span className="text-purple">Education</span>
             </div>{" "}
-            <div className="slide-line"></div>
+            <div
+              className={`slide-line ${
+                theme ? "slide-line-dark" : "slide-line-light "
+              }`}
+            ></div>
           </h3>
           <div className="row d-flex   justify-content-center align-items-center">
             {EducationDB.map((items, index) => {
               return (
                 <div className="col-md-8 col-10 education-box my-3" key={index}>
-                  <div className="row education-details">
+                  <div
+                    className={`row education-details ${
+                      theme
+                        ? "education-details-dark"
+                        : "education-details-light"
+                    }`}
+                  >
                     <div className="col-md-4 institution-pic">
                       <img src={items.institution_pic} alt="abs" />
                       {/* <img src={abs} alt="abs" /> */}
                     </div>
                     <div className="col-md-8">
-                      <h4 className="institute-degree mt-3">
+                      <h4
+                        className={`institute-degree mt-3 ${
+                          theme
+                            ? "institute-degree-dark"
+                            : "institute-degree-light"
+                        }`}
+                      >
                         {items.institute_degree}
                         {/* Diploma in Computer Science and Technology */}
                       </h4>
@@ -242,7 +300,11 @@ const About = () => {
                         {items.institute_name}
                         {/* ABS Academy of Polytechnic | WBSCT&VE&SD */}
                       </h6>
-                      <h5 className="passing-year">
+                      <h5
+                        className={`passing-year ${
+                          theme ? "passing-year-dark" : "passing-year-light"
+                        }`}
+                      >
                         {items.passing_year}
                         {/* 2019-2022 | Completed */}
                       </h5>
