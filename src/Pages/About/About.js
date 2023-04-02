@@ -214,13 +214,40 @@ const About = () => {
               className="col-lg-6 d-flex s justify-content-center align-items-start"
               data-aos="zoom-out-left"
             >
-              <img
+              <div
+                className={`mainBox ${
+                  theme ? "mainBox_dark_mode" : "mainBox_light_mode"
+                }`}
+              >
+                <div className={`leftAni `}>Hire</div>
+                {/* <Image
+          src="/myself.png"
+          width={"400"}
+          height={"400"}
+          className={styles.pic}
+        ></Image> */}
+                <img
+                  src={AboutDB.profile_pic}
+                  alt="profile-pic"
+                  className={`profile-pic profile_picture ${
+                    theme ? "profile-pic-dark" : "profile-pic-light"
+                  }`}
+                />
+                <div
+                  className={`rightAni ${
+                    theme ? "rightAni_dark_mode" : "rightAni_light_mode"
+                  }`}
+                >
+                  Me
+                </div>
+              </div>
+              {/* <img
                 src={AboutDB.profile_pic}
                 alt="profile-pic"
                 className={`profile-pic ${
                   theme ? "profile-pic-dark" : "profile-pic-light"
                 }`}
-              />
+              /> */}
             </div>
           </div>
         </div>
