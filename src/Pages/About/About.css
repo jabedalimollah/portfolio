@@ -451,8 +451,14 @@
   border-radius: 50%;
   position: relative;
 }
-.leftAni {
+.leftAni-light-mode {
   box-shadow: 6px 8px 9px rgba(152, 29, 180, 0.49);
+}
+.leftAni-dark-mode {
+  box-shadow: 6px 8px 9px rgba(52, 52, 52, 0.49);
+}
+.leftAni {
+  /* box-shadow: 6px 8px 9px rgba(152, 29, 180, 0.49); */
   width: 100px;
   height: 100px;
   display: flex;
@@ -493,6 +499,7 @@
     rgba(148, 0, 164, 1) 59%,
     rgba(238, 0, 255, 0.444) 100%
   );
+  box-shadow: 6px 8px 9px rgba(152, 29, 180, 0.49);
 }
 .rightAni_dark_mode {
   background: rgb(2, 0, 36);
@@ -502,9 +509,13 @@
     rgba(148, 0, 164, 1) 59%,
     rgba(238, 0, 255, 0.444) 100%
   );
+  box-shadow: 6px 8px 9px rgba(52, 52, 52, 0.49);
+}
+.rightAni-light {
+  box-shadow: 6px 8px 9px rgba(152, 29, 180, 0.49);
 }
 .rightAni {
-  box-shadow: 6px 8px 9px rgba(152, 29, 180, 0.49);
+  /* box-shadow: 6px 8px 9px rgba(152, 29, 180, 0.49); */
   width: 80px;
   height: 80px;
   display: flex;

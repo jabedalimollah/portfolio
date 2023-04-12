@@ -11,6 +11,7 @@ import SkillsDB from "../../Database/SkillsDB.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 const About = () => {
   const [text, setText] = useState();
 
@@ -18,6 +19,7 @@ const About = () => {
   const [educationData, setEducationData] = useState([]);
   const [skillsData, setSkillsData] = useState([]);
   const theme = useSelector((state) => state.theme.value);
+  const Navigate = useNavigate();
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
@@ -31,6 +33,9 @@ const About = () => {
     AOS.init();
   }, [educationData, skillsData]);
 
+  const HireMeButton = () => {
+    Navigate("/contact");
+  };
   return (
     <>
       <div
@@ -216,10 +221,17 @@ const About = () => {
             >
               <div
                 className={`mainBox ${
-                  theme ? "mainBox_dark_mode" : "mainBox_light_mode"
+                  theme ? "mainBox_dark_mode " : "mainBox_light_mode"
                 }`}
               >
-                <div className={`leftAni `}>Hire</div>
+                <div
+                  className={`leftAni ${
+                    theme ? "leftAni-dark-mode" : "leftAni-light-mode"
+                  } `}
+                  onClick={HireMeButton}
+                >
+                  Hire
+                </div>
                 {/* <Image
           src="/myself.png"
           width={"400"}
@@ -235,8 +247,9 @@ const About = () => {
                 />
                 <div
                   className={`rightAni ${
-                    theme ? "rightAni_dark_mode" : "rightAni_light_mode"
+                    theme ? "rightAni_dark_mode" : "rightAni_light_mode "
                   }`}
+                  onClick={HireMeButton}
                 >
                   Me
                 </div>
