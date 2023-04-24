@@ -179,7 +179,7 @@
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: rgba(0, 0, 0, 0.418) 5px 5px 8px;
-  /* border: 2px solid rgb(199, 199, 199); */
+  border: 1px solid rgb(199, 199, 199);
 }
 
 .project-image-tag:hover .project-info {
