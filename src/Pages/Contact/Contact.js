@@ -9,14 +9,19 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { RiMessage2Fill } from "react-icons/ri";
 import { FaHeadset } from "react-icons/fa";
 import Lottie from "lottie-react";
-import ContactImage from "../../images/contactImage2.json";
+// import ContactImage from "../../images/contactImage2.json";
+// import ContactImageDark from "../../images/63487-programming-computer.json";
+import ContactImageDark from "../../images/lf20_uya4kd2o.json";
+import ContactImage from "../../images/75296-developer-01-whoooa (2).json";
 import { useNavigate } from "react-router-dom";
 import AboutDB from "../../Database/AboutDB.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "../../Layout/Footer/Footer";
+import { useSelector } from "react-redux";
 const Contact = () => {
   const [data, setData] = useState({});
+  const theme = useSelector((state) => state.theme.value);
   const Navigate = useNavigate();
   const formSubmitBtn = (e) => {
     e.preventDefault();
@@ -28,15 +33,35 @@ const Contact = () => {
   }, []);
   return (
     <>
-      <div className="contact_info ">
+      <div
+        className={`contact_info ${
+          theme ? "contact_info-dark" : "contact_info-light "
+        }`}
+      >
         <div className="container">
-          <div className="row d-flex mt-5">
-            <div className="col-lg-4  ">
+          <div className="row d-flex py-4">
+            <div className="col-lg-4 mb-3  ">
               {/* phone number */}
-              <div className="contact-info-item py-3 px-3 d-flex align-items-center">
-                <img src={Phone} alt="phone" className="contact-icons" />
+              <div
+                className={`contact-info-item py-3 px-3 d-flex align-items-center ${
+                  theme ? "contact-info-item-dark" : "contact-info-item-light"
+                }`}
+              >
+                <img
+                  src={Phone}
+                  alt="phone"
+                  className={`contact-icons ${
+                    theme ? "contact-icons-dark" : "contact-icons-light"
+                  }`}
+                />
 
-                <div className="contact-info-content m-2">
+                <div
+                  className={`contact-info-content m-2 ${
+                    theme
+                      ? "contact-info-content-dark"
+                      : "contact-info-content-light"
+                  }`}
+                >
                   <div className="contact-info-tile">Phone</div>
                   <div className="contact-info-text">
                     {data.phone}
@@ -45,12 +70,28 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 ">
+            <div className="col-lg-4 mb-3">
               {/* email  */}
-              <div className="contact-info-item py-3 px-3 d-flex align-items-center">
-                <img src={Email} alt="email" className="contact-icons" />
+              <div
+                className={`contact-info-item py-3 px-3 d-flex align-items-center  ${
+                  theme ? "contact-info-item-dark" : "contact-info-item-light"
+                }`}
+              >
+                <img
+                  src={Email}
+                  alt="email"
+                  className={`contact-icons  ${
+                    theme ? "contact-icons-dark" : "contact-icons-light"
+                  }`}
+                />
 
-                <div className="contact-info-content m-2">
+                <div
+                  className={`contact-info-content m-2  ${
+                    theme
+                      ? "contact-info-content-dark"
+                      : "contact-info-content-light"
+                  }`}
+                >
                   <div className="contact-info-tile">Email</div>
                   <div className="contact-info-text">
                     {data.email}
@@ -59,12 +100,28 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 ">
+            <div className="col-lg-4 mb-3">
               {/* address  */}
-              <div className="contact-info-item py-3 px-3 d-flex align-items-center">
-                <img src={House} alt="house" className="contact-icons" />
+              <div
+                className={`contact-info-item py-3 px-3 d-flex align-items-center  ${
+                  theme ? "contact-info-item-dark" : "contact-info-item-light"
+                }`}
+              >
+                <img
+                  src={House}
+                  alt="house"
+                  className={`contact-icons  ${
+                    theme ? "contact-icons-dark" : "contact-icons-light"
+                  }`}
+                />
 
-                <div className="contact-info-content m-2">
+                <div
+                  className={`contact-info-content m-2  ${
+                    theme
+                      ? "contact-info-content-dark"
+                      : "contact-info-content-light"
+                  }`}
+                >
                   <div className="contact-info-tile">Address</div>
                   <div className="contact-info-text">
                     {data.place}
@@ -80,7 +137,11 @@ const Contact = () => {
         <div className="contact-form mt-5 ">
           <div className="container ">
             <div className="row  ">
-              <div className="contact-form-data  col-lg-10 offset-lg-1">
+              <div
+                className={`contact-form-data  col-lg-10 offset-lg-1 ${
+                  theme ? "contact-form-data-dark " : "contact-form-data-light"
+                }`}
+              >
                 <div className="row  mt-3 mb-4">
                   <div className="col-lg-10 text-center">
                     <div className="contact-form-title">
@@ -90,15 +151,19 @@ const Contact = () => {
                           <FaHeadset /> Get in{" "}
                           <span className="text-purple"> Touch</span>
                         </div>{" "}
-                        <div className="slide-line"></div>
+                        <div
+                          className={`slide-line ${
+                            theme ? "slide-line-dark" : "slide-line-light "
+                          }`}
+                        ></div>
                       </h3>
                       {/* Get in Touch */}
                     </div>
                   </div>
                 </div>
 
-                <form id="contact-form ">
-                  <div className="row  d-flex justify-content-center">
+                <form id="contact-form  ">
+                  <div className="row py-4  d-flex justify-content-center">
                     <div className="col-lg-4 ">
                       <div className="row ">
                         <div
@@ -112,7 +177,11 @@ const Contact = () => {
                               type="text"
                               name="name"
                               id="name"
-                              className="contact-name "
+                              className={`contact-name  ${
+                                theme
+                                  ? "contact-color-dark"
+                                  : "contact-color-light"
+                              }`}
                               placeholder="Your Name"
                             />
                           </div>
@@ -129,7 +198,11 @@ const Contact = () => {
                               type="email"
                               name="email"
                               id="email"
-                              className="contact-email"
+                              className={`contact-email   ${
+                                theme
+                                  ? "contact-color-dark"
+                                  : "contact-color-light"
+                              }`}
                               placeholder="Your Email"
                             />
                           </div>
@@ -146,7 +219,11 @@ const Contact = () => {
                               type="text"
                               name="phone"
                               id="phone"
-                              className="contact-phone"
+                              className={`contact-phone   ${
+                                theme
+                                  ? "contact-color-dark"
+                                  : "contact-color-light"
+                              }`}
                               placeholder="Your Phone Number"
                             />
                           </div>
@@ -162,7 +239,11 @@ const Contact = () => {
                             <textarea
                               name="message"
                               placeholder="Message"
-                              className="contact-message-box"
+                              className={`contact-message-box   ${
+                                theme
+                                  ? "contact-color-dark"
+                                  : "contact-color-light"
+                              }`}
                             ></textarea>
                           </div>
                         </div>
@@ -174,7 +255,11 @@ const Contact = () => {
                         >
                           <button
                             type="submit"
-                            className="button contact-submit-button"
+                            className={`button contact-submit-button ${
+                              theme
+                                ? "contact-submit-button-dark"
+                                : "contact-submit-button-light"
+                            }`}
                             onClick={formSubmitBtn}
                           >
                             Send Message
@@ -184,7 +269,7 @@ const Contact = () => {
                     </div>
                     <div className="col-lg-5 ">
                       <Lottie
-                        animationData={ContactImage}
+                        animationData={theme ? ContactImageDark : ContactImage}
                         className="contact-lottie-image"
                       />
                     </div>

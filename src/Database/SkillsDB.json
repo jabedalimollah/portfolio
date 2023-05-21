@@ -1,42 +1,57 @@
 [
   {
+    "id": 1,
     "skill_image": "../images/html-5.png",
     "skill_title": "HTML"
   },
   {
+    "id": 2,
     "skill_image": "../images/css3.png",
     "skill_title": "CSS"
   },
   {
+    "id": 3,
     "skill_image": "../images/javascript.png",
     "skill_title": "JavaScript"
   },
   {
+    "id": 4,
     "skill_image": "../images/bootstrap.png",
     "skill_title": "Bootstrap"
   },
   {
+    "id": 5,
     "skill_image": "../images/ReactJs.png",
     "skill_title": "React JS"
   },
   {
+    "id": 6,
     "skill_image": "../images/Git-Icon.png",
     "skill_title": "Git"
   },
   {
+    "id": 7,
     "skill_image": "../images/github-logo.png",
     "skill_title": "GitHub"
   },
   {
+    "id": 8,
     "skill_image": "../images/redux.png",
     "skill_title": "Redux"
   },
   {
+    "id": 9,
     "skill_image": "../images/Axios.png",
     "skill_title": "Axios"
   },
   {
+    "id": 10,
     "skill_image": "../images/jquery.png",
     "skill_title": "Jquery"
+  },
+  {
+    "id": 11,
+    "skill_image": "../images/nextjs.svg",
+    "skill_title": "Next JS"
   }
 ]

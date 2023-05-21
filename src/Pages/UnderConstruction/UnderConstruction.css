@@ -1,3 +1,11 @@
+.underConstruction-dark {
+  background-color: black;
+  height: 100vh;
+}
+.underConstruction-light {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+}
 .under-construction-box {
   height: 80vh;
   display: flex;
@@ -6,8 +14,8 @@
   flex-direction: column;
 }
 .coming-soon-box {
-  background-color: black;
-  color: yellow;
+  /* background-color: black;
+  color: yellow; */
   font-weight: bold;
   font-size: 2rem;
   text-align: center;
@@ -15,6 +23,15 @@
   transform: skew(-20deg);
   text-transform: uppercase;
   z-index: 3;
+}
+.coming-soon-box-light {
+  background-color: black;
+  color: yellow;
+}
+.coming-soon-box-dark {
+  /* background-color: black; */
+  border: 1px solid rgb(150, 149, 149);
+  color: yellow;
 }
 .under-construction-back-box {
   display: flex;

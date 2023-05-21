@@ -1,0 +1,8 @@
+.error-page-light {
+  background-color: white;
+}
+.error-page-dark {
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  padding-top: 30px;
+}

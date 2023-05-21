@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Coiny&family=Poppins:wght@100;200;300&family=Roboto:wght@100;300;400;500;700;900&family=Work+Sans:wght@300;400;700;900&display=swap");
 .projects-page {
-  margin-bottom: 140px;
+  height: 100vh;
+  overflow: auto;
+  padding-bottom: 120px;
+  padding-top: 40px;
+}
+.projects-page-light {
+  /* margin-bottom: 140px; */
+  background-color: white;
+}
+.projects-page-dark {
+  /* margin-bottom: 140px; */
+  background-color: black;
 }
 
 .project-image {
@@ -11,13 +22,25 @@
 
 .project-name {
   font-weight: bold;
-
-  background: linear-gradient(90deg, #000000d4, #7f0381);
+  /* 
+  background: linear-gradient(90deg, #000000d4, #7f0381); */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
   text-transform: capitalize;
+}
+.project-name-light {
+  background: linear-gradient(90deg, #000000d4, #7f0381);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.project-name-dark {
+  background: linear-gradient(90deg, #959595d4, #7f0381);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .project-image-box {
   z-index: 5;
@@ -53,7 +76,7 @@
   padding: 0.5rem 1rem;
   text-decoration: none;
 
-  border: 1px solid green;
+  border: 2px solid green;
 
   color: green;
   border-radius: 10%;
@@ -86,13 +109,23 @@
   position: absolute;
   top: 0;
   border-radius: 6%;
-  background-color: rgb(226, 221, 221);
-  box-shadow: 5px 6px 9px gray inset;
+  /* background-color: rgb(226, 221, 221);
+  box-shadow: 5px 6px 9px gray inset; */
   padding: 1rem;
   overflow: auto;
   display: flex;
   flex-direction: column;
   opacity: 1;
+}
+.info-description-light {
+  background-color: rgb(226, 221, 221);
+  box-shadow: 5px 6px 9px gray inset;
+  color: black;
+}
+.info-description-dark {
+  background-color: rgb(21, 21, 21);
+  color: rgb(154, 153, 153);
+  /* box-shadow: 5px 6px 9px gray inset; */
 }
 .info-para {
   height: 100%;
@@ -139,14 +172,16 @@
   border-radius: 6%;
   padding: 0;
   position: relative;
-
+  /* opacity: 0.5 !important; */
   background-size: cover;
 
   background-origin: padding-box;
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: rgba(0, 0, 0, 0.418) 5px 5px 8px;
+  border: 1px solid rgb(199, 199, 199);
 }
+
 .project-image-tag:hover .project-info {
   height: 100%;
 }
@@ -158,9 +193,17 @@
   opacity: 0;
 
   border-radius: 6%;
+  /* background-color: rgb(226, 221, 221);
+  box-shadow: 5px 6px 9px gray inset; */
+  transition: all 1s;
+}
+.project-info-light {
   background-color: rgb(226, 221, 221);
   box-shadow: 5px 6px 9px gray inset;
-  transition: all 1s;
+}
+.project-info-dark {
+  background-color: rgba(28, 27, 27, 0.927);
+  /* box-shadow: 5px 6px 9px gray inset; */
 }
 .project-info:hover {
   opacity: 1;
@@ -169,7 +212,7 @@
   padding: 0.5rem 1rem;
   text-decoration: none;
 
-  border: 1px solid gray;
+  border: 2px solid gray;
 
   color: grey;
   border-radius: 10%;
@@ -210,4 +253,8 @@
 /* ============================ Phones =============== */
 @media only screen and (max-width: 767px) {
   /* phones */
+  .projects-page {
+    height: auto;
+    overflow: auto;
+  }
 }

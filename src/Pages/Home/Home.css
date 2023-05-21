@@ -1,38 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@100;200;300&family=Roboto:wght@100;300;400;500;700;900&family=Work+Sans:wght@300;400;700;900&display=swap");
-
+.home-page {
+  min-height: 100vh;
+  padding-top: 40px;
+}
+.home-page-light {
+  background-color: white;
+}
+.home-page-dark {
+  background-color: black;
+}
 .text-contant h1 {
   font-weight: bold;
-  color: rgb(82, 81, 81);
+
   font-family: "Archivo Black", sans-serif;
   font-family: "Poppins", sans-serif;
   font-family: "Roboto", sans-serif;
   font-family: "Work Sans", sans-serif;
 }
+.home-secondtext-light {
+  color: rgb(82, 81, 81);
+}
+.home-secondtext-dark {
+  color: rgb(181, 181, 181);
+}
 .text-animated {
   margin-left: 0.6rem;
   color: purple;
 }
-.text {
+.home-firsttext-light {
   color: rgb(118, 116, 116);
+  /* color: green; */
 }
-.home-description {
+.home-firsttext-dark {
+  color: rgba(255, 255, 255, 0.71);
+  /* color: blue; */
+}
+
+/* .home-description {
+  color: rgb(48, 48, 48);
+} */
+.home-description-dark {
+  color: rgba(255, 255, 255, 0.838);
+  /* letter-spacing: 1px; */
+}
+.home-description-light {
   color: rgb(48, 48, 48);
 }
 .download-Resume-button {
   text-decoration: none;
   padding: 0.7rem 1.5rem;
-  background-color: rgb(93, 21, 93);
-  color: white;
+
   font-weight: bold;
   border: none;
   outline: none;
 
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
-
   position: relative;
 }
-
+.download-Resume-button-light {
+  background-color: rgb(93, 21, 93);
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+.download-Resume-button-dark {
+  /* background-color: rgba(81, 22, 81, 0.6); */
+  /* color: rgba(255, 255, 255, 0.625); */
+  color: black;
+  background-image: linear-gradient(to right, #667eea, #764ba2);
+  border-radius: 10px;
+  /* box-shadow: 0 4px 15px 0 rgba(145, 122, 179, 0.75); */
+  /* box-shadow: 0 12px 16px 0 rgba(189, 189, 189, 0.24),
+    0 17px 50px 0 rgba(173, 173, 173, 0.19); */
+}
+.download-Resume-button-dark:hover {
+}
 .download-animation-icons {
   animation-name: download;
   animation-duration: 4s;
@@ -48,9 +90,15 @@
     font-size: 2rem;
   }
 }
-.download-Resume-button:hover {
+.download-Resume-button-light:hover {
   background-color: skyblue;
   color: rgb(48, 48, 48);
+
+  transform: scaleX(0.9);
+}
+.download-Resume-button-dark:hover {
+  background-color: skyblue;
+  color: rgb(12, 12, 12);
   transform: scaleX(0.9);
 }
 .download-lottie-image {
@@ -63,15 +111,27 @@
 .social-media-tag {
   display: inline-block;
 }
+
 .social-media-handle {
   color: #446eac;
   padding: 0.7rem;
 
   border-radius: 50%;
   margin: 0.4rem;
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22); */
+}
+.social-media-handle-light {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
 }
-.social-media-handle:hover {
+.social-media-handle-dark {
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22); */
+  border: 2px solid #446eac;
+}
+.social-media-handle-dark:hover {
+  background-color: #446eac;
+  color: black;
+}
+.social-media-handle-light:hover {
   background-color: #446eac;
 
   color: white;
@@ -80,7 +140,9 @@
 @media only screen and (min-width: 768px) {
   /* tablets and desktop */
   .home-page {
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    /* padding-top: 50px; */
+    padding-top: 60px;
   }
 
   .home-description {
@@ -101,10 +163,12 @@
 @media only screen and (max-width: 767px) {
   /* phones */
   .mobile-margin {
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    padding-top: 30px;
   }
   .home-page {
-    margin-bottom: 140px;
+    /* margin-bottom: 140px; */
+    padding-bottom: 140px;
   }
   .text-contant h1 {
     font-size: 1.3rem;

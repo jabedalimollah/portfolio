@@ -1,16 +1,33 @@
 .header {
   width: 100%;
-  background-color: rgba(250, 235, 215, 0.367);
+  position: absolute;
   padding: 6px 0;
+  z-index: 33;
+  /* top: 0;
+  margin-bottom: 100px; */
 }
+/* .logobox {
+  background-color: rgb(253, 253, 253);
+  border-radius: 10%;
+} */
 .logo {
   height: 30px;
   margin-left: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 .logo img {
   height: 100%;
 }
+.header-light-mode {
+  background-color: rgba(250, 235, 215, 0.367);
+}
+.header-dark-mode {
+  background-color: rgb(70, 23, 67);
+}
+/* ******************************* */
 
+/* ***************************** */
 /* =================================== */
 .menu {
   position: fixed;
@@ -21,15 +38,24 @@
   z-index: 999;
 }
 .navbar-icon {
-  background-color: rgba(255, 251, 251, 0.959);
+  /* background-color: rgba(255, 251, 251, 0.959); */
   border-radius: 50px;
   padding-left: 0;
   display: flex;
 
   justify-content: center;
 
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
+}
+.navbar-icon-light {
+  background-color: rgba(255, 251, 251, 0.959);
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.navbar-icon-dark {
+  background-color: rgba(30, 29, 29, 0.788);
+  /* border: 1px solid rgb(194, 194, 194); */
 }
 .nav-icon {
   display: inline-block;
@@ -39,9 +65,20 @@
 .navlink {
   text-decoration: none;
 
-  color: rgba(70, 2, 70, 0.64);
+  /* color: rgba(70, 2, 70, 0.64); */
   position: relative;
   font-size: 1.8rem;
+}
+.navlink-light {
+  color: rgba(70, 2, 70, 0.64);
+}
+.navlink-dark {
+  color: rgba(11, 135, 243, 0.64);
+}
+.themeButton {
+  border: none;
+  outline: none;
+  background-color: transparent;
 }
 .home:hover,
 .project:hover,
@@ -52,6 +89,13 @@
   top: -20px;
 }
 
+.sun {
+  color: rgb(182, 182, 4);
+}
+.moon {
+  /* color: rgba(70, 2, 70, 0.64); */
+  color: rgba(73, 72, 72, 0.764);
+}
 @media only screen and (min-width: 768px) {
   /* tablets and desktop */
 }
@@ -59,7 +103,7 @@
 @media only screen and (max-width: 767px) {
   /* phones */
   .navbar-icon {
-    background-color: rgba(255, 251, 251, 0.959);
+    /* background-color: rgba(255, 251, 251, 0.959); */
     border-radius: 50px;
     padding-left: 0;
     display: flex;
@@ -75,7 +119,7 @@
     text-decoration: none;
 
     font-size: 1.3rem;
-    color: rgba(70, 2, 70, 0.64);
+    /* color: rgba(70, 2, 70, 0.64); */
     position: relative;
   }
   .home:hover,
