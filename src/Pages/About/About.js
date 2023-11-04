@@ -224,14 +224,16 @@ const About = () => {
                   theme ? "mainBox_dark_mode " : "mainBox_light_mode"
                 }`}
               >
-                <div
+                {/* ======= Hire Tag Start==== */}
+                {/* <div
                   className={`leftAni ${
                     theme ? "leftAni-dark-mode" : "leftAni-light-mode"
                   } `}
                   onClick={HireMeButton}
                 >
                   Hire
-                </div>
+                </div> */}
+                {/* ===== Hire Tag End ===== */}
                 {/* <Image
           src="/myself.png"
           width={"400"}
@@ -245,14 +247,16 @@ const About = () => {
                     theme ? "profile-pic-dark" : "profile-pic-light"
                   }`}
                 />
-                <div
+                {/* ======== Me tag Start ====== */}
+                {/* <div
                   className={`rightAni ${
                     theme ? "rightAni_dark_mode" : "rightAni_light_mode "
                   }`}
                   onClick={HireMeButton}
                 >
                   Me
-                </div>
+                </div> */}
+                {/* ======= Me tag End ========== */}
               </div>
               {/* <img
                 src={AboutDB.profile_pic}
