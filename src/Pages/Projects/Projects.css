@@ -37,7 +37,8 @@
   -webkit-text-fill-color: transparent;
 }
 .project-name-dark {
-  background: linear-gradient(90deg, #959595d4, #7f0381);
+  background: linear-gradient(90deg, #fffefed4, #7f0381);
+  /* background: linear-gradient(90deg, #959595d4, #7f0381); */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -56,10 +57,69 @@
 
   box-shadow: rgba(0, 0, 0, 0.418) 5px 5px 8px;
 }
-.project-image-box:hover {
+/* .project-image-box:hover {
   opacity: 0;
+} */
+.project_image {
+  width: 100%;
+  /* height: 70dvh; */
+}
+.project_image img {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 6%; */
+  /* border-radius: 6% 6% 6% 6%; */
+  border-top-left-radius: 6%;
+  border-top-right-radius: 6%;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+.project-coponent {
+  width: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 2px 0px;
+}
+.project-coponent h3 {
+  color: white;
+  font-size: 1rem;
+}
+.project_link_box {
+  width: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* height: 100%; */
 }
 
+.github-project-link {
+  background-color: rgb(60, 60, 60);
+  padding: 3px 0px;
+  border-radius: 5px;
+  width: 40%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.github-project-link:hover {
+  background-color: grey;
+}
+.project-link {
+  background-color: green;
+  padding: 3px 0px;
+  width: 40%;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.project-link:hover {
+  background-color: rgb(2, 81, 2);
+}
 .project-info-1 {
   width: 100%;
   height: 100%;
@@ -168,7 +228,8 @@
 }
 /* ------------------- */
 .project-image-tag {
-  height: 300px;
+  height: 250px;
+  /* height: 300px; */
   border-radius: 6%;
   padding: 0;
   position: relative;
@@ -181,7 +242,11 @@
   box-shadow: rgba(0, 0, 0, 0.418) 5px 5px 8px;
   border: 1px solid rgb(199, 199, 199);
 }
-
+.project-image-tags {
+  box-shadow: rgba(0, 0, 0, 0.418) 5px 5px 8px;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 6%;
+}
 .project-image-tag:hover .project-info {
   height: 100%;
 }
@@ -235,17 +300,18 @@
 @media only screen and (min-width: 768px) {
   /* tablets and desktop */
   .project-image-tag {
-    height: 350px;
+    height: 320px;
+    /* height: 350px; */
 
     border-radius: 6%;
     padding: 0;
-    position: relative;
+    /* position: relative;
 
-    background-size: cover;
+    background-size: cover; */
 
-    background-origin: padding-box;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* background-origin: padding-box; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
     box-shadow: rgba(0, 0, 0, 0.418) 5px 5px 8px;
   }
 }

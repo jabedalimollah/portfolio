@@ -43,10 +43,59 @@ const Projects = () => {
               return (
                 <div
                   key={index}
+                  // data-aos="zoom-in"
+                  className={`col-lg-3 col-md-8 col-8 mx-5 my-3 project-image-tags py-3 d-flex flex-column justify-content-start align-items-start pt-2  `}
+                  // className={`col-lg-3 col-8 mx-5 my-3 project-image-tag  d-flex  justify-content-center align-items-center  `}
+                >
+                  <div className="project_image">
+                    <img src={items.project_image} alt={items.project_image} />
+                  </div>
+                  {/* <div>Name</div> */}
+
+                  <div className="project-coponent">
+                    <h3
+                      className={`my-2 project-name ${
+                        theme ? "project-name-dark " : "project-name-light"
+                      }`}
+                    >
+                      {items.project_name}
+                    </h3>
+                    <div className="project_link_box">
+                      <a
+                        href={items.github}
+                        target="_blank"
+                        className="github-project-link"
+                      >
+                        Github
+                      </a>
+                      <a
+                        href={items.live_button}
+                        target="_blank"
+                        className="project-link"
+                      >
+                        Live
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Projects;
+
+{
+  /* <div
+                  key={index}
                   data-aos="zoom-in"
                   className={`col-lg-3 col-8 mx-5 my-3 project-image-tag  d-flex  justify-content-center align-items-center  `}
                   style={{
-                    // backgroundImage: `url(${items.project_image})`,
+                   
                     backgroundImage: theme
                       ? `linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(${items.project_image})`
                       : `url(${items.project_image})
@@ -64,7 +113,7 @@ const Projects = () => {
                           theme ? "project-name-dark " : "project-name-light"
                         }`}
                       >
-                        {/* Crud App */}
+                     
                         {items.project_name}
                       </h3>
                       <div
@@ -73,7 +122,7 @@ const Projects = () => {
                         }
                       >
                         <a
-                          // href="http://"
+                         
                           href={items.live_button}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -104,23 +153,10 @@ const Projects = () => {
                         <AiOutlineClose />
                       </button>
                       <p className="info-para">
-                        {/* Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Aliquam asperiores saepe, aut ex facere sed
-                        laborum ratione excepturi cupiditate provident
-                        praesentium doloribus est ut fugiat minima laboriosam
-                        molestias dicta officia! */}
+                        
                         {items.project_info}
                       </p>
                     </div>
                   )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default Projects;
+                </div> */
+}

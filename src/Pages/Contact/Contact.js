@@ -93,10 +93,16 @@ const Contact = () => {
                   }`}
                 >
                   <div className="contact-info-tile">Email</div>
-                  <div className="contact-info-text">
+                  <a
+                    className="contact-info-text"
+                    href={`mailto:${data.email}`}
+                  >
                     {data.email}
-                    {/* jabed@test.com */}
-                  </div>
+                  </a>
+                  {/* <div className="contact-info-text">
+                    {data.email}
+                   
+                  </div> */}
                 </div>
               </div>
             </div>

@@ -107,6 +107,8 @@
 .social-media-component {
   padding: 0;
   margin: 0;
+  display: flex;
+  gap: 0 11px;
 }
 .social-media-tag {
   display: inline-block;
@@ -115,9 +117,10 @@
 .social-media-handle {
   color: #446eac;
   padding: 0.7rem;
+  /* padding: 0.5rem; */
 
   border-radius: 50%;
-  margin: 0.4rem;
+  /* margin: 0.4rem; */
   /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22); */
 }
 .social-media-handle-light {
@@ -171,7 +174,8 @@
     padding-bottom: 140px;
   }
   .text-contant h1 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    /* font-size: 1.3rem; */
     font-weight: bold;
     color: rgb(82, 81, 81);
     font-family: "Archivo Black", sans-serif;
@@ -182,6 +186,16 @@
   .text-animated {
     margin-left: 0.4rem;
     color: purple;
+  }
+
+  .social-media-handle {
+    color: #446eac;
+    /* padding: 0.7rem; */
+    padding: 0.5rem;
+
+    border-radius: 50%;
+    /* margin: 0.4rem; */
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22); */
   }
   ::-webkit-scrollbar {
     width: 7px;

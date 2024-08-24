@@ -53,5 +53,40 @@
     "id": 11,
     "skill_image": "../images/nextjs.svg",
     "skill_title": "Next JS"
+  },
+  {
+    "id": 12,
+    "skill_image": "../images/nodejs1.png",
+    "skill_title": "Node JS"
+  },
+  {
+    "id": 13,
+    "skill_image": "../images/expressjs.png",
+    "skill_title": "Express JS"
+  },
+  {
+    "id": 14,
+    "skill_image": "../images/mongodb.png",
+    "skill_title": "MongoDB"
+  },
+  {
+    "id": 15,
+    "skill_image": "../images/tailwindcss.png",
+    "skill_title": "Tailwind CSS"
+  },
+  {
+    "id": 16,
+    "skill_image": "../images/netlify.png",
+    "skill_title": "Netlify"
+  },
+  {
+    "id": 17,
+    "skill_image": "../images/vercel.png",
+    "skill_title": "Vercel"
+  },
+  {
+    "id": 18,
+    "skill_image": "../images/typescript.png",
+    "skill_title": "Typescript"
   }
 ]

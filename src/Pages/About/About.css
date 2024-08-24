@@ -137,13 +137,15 @@
 }
 .degree {
   font-weight: bold;
-  color: purple;
+  color: rgb(166, 0, 166);
+  /* color: purple; */
 }
 .about-description-light {
   color: black;
 }
 .about-description-dark {
-  color: rgb(184, 182, 182);
+  color: rgb(223, 219, 219);
+  /* color: rgb(184, 182, 182); */
 }
 .profile-pic {
   width: 60%;
@@ -337,6 +339,7 @@
 }
 .education-box {
   transition: transform 0.2s;
+  /* border-radius: 20px; */
 }
 .education-box:hover {
   transform: scale(1.1);
@@ -350,6 +353,8 @@
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 7px;
+  padding: 3px 0px;
 }
 .education-details-dark {
   background-color: rgb(7, 7, 7);
@@ -411,6 +416,10 @@
     background-color: white;
     border-radius: 10%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+  }
+  .skill-title {
+    font-weight: bold;
+    font-size: 0.8rem;
   }
   .institute-degree {
     font-weight: bold;

@@ -14,6 +14,8 @@ import { FaFacebookF } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { MdFileDownload } from "react-icons/md";
+import { FaYoutube } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import DownloadForm from "../../Components/HomeComponent/DownloadForm/DownloadForm";
 import HomeDB from "../../Database/HomeDB.json";
 import AOS from "aos";
@@ -314,6 +316,37 @@ const Home = () => {
                     }`}
                   >
                     <BsLinkedin />
+                  </a>
+                </li>
+
+                <li className={`social-media-tag `}>
+                  <a
+                    // href="http://"
+                    href={data.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`social-media-handle ${
+                      theme
+                        ? "social-media-handle-dark"
+                        : "social-media-handle-light"
+                    }`}
+                  >
+                    <FaYoutube />
+                  </a>
+                </li>
+                <li className={`social-media-tag `}>
+                  <a
+                    // href="http://"
+                    href={data.x}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`social-media-handle ${
+                      theme
+                        ? "social-media-handle-dark"
+                        : "social-media-handle-light"
+                    }`}
+                  >
+                    <FaXTwitter />
                   </a>
                 </li>
               </ul>

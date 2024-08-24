@@ -11,12 +11,14 @@ body {
   user-select: none;
 }
 .text-dark {
-  color: rgba(245, 245, 245, 0.484) !important;
+  /* color: rgba(245, 245, 245, 0.484) !important; */
+  color: rgb(222, 222, 222) !important;
 }
 .text-light {
   color: #433a45 !important;
-  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
-    0px -5px 35px rgba(255, 255, 255, 0.3);
+  /* color: #c2c1c1 !important; */
+  /* text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+    0px -5px 35px rgba(255, 255, 255, 0.3); */
 }
 .text-purple {
   color: purple;
@@ -27,7 +29,8 @@ body {
   font-size: 3rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: #433a45;
+  color: #c2c1c1;
+  /* color: #433a45; */
 
   animation-name: examples;
   animation-duration: 0.3s;
@@ -40,6 +43,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
 .slide-line-light {
   background-image: linear-gradient(90deg, #433a45 2%, purple 98%);
 }
@@ -145,13 +149,14 @@ body {
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color: #433a45;
+    color: #c2c1c1;
+    /* color: #433a45; */
     animation-name: examples;
     animation-duration: 0.3s;
     animation-iteration-count: infinite;
 
-    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
-      0px -5px 35px rgba(255, 255, 255, 0.3);
+    /* text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+      0px -5px 35px rgba(255, 255, 255, 0.3); */
     display: flex;
     justify-content: center;
     align-items: center;

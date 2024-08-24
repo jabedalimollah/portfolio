@@ -168,7 +168,7 @@ const About = () => {
                 <div className="col-lg-6">
                   <div className="">
                     <span className="email">Email : </span>
-                    <span
+                    {/* <span
                       className={` ${
                         theme
                           ? "about-description-dark"
@@ -176,8 +176,18 @@ const About = () => {
                       }`}
                     >
                       {data.email}
-                      {/* jabedalimollah7@gmail.com */}
-                    </span>
+                      
+                    </span> */}
+                    <a
+                      href={`mailto:${data.email}`}
+                      className={` ${
+                        theme
+                          ? "about-description-dark"
+                          : "about-description-light"
+                      }`}
+                    >
+                      {data.email}
+                    </a>
                   </div>
                 </div>
                 <div className="col-lg-6">
@@ -192,7 +202,6 @@ const About = () => {
                       }`}
                     >
                       {data.phone}
-                      {/* +91 629-596-5896 */}
                     </span>
                   </div>
                 </div>
@@ -294,7 +303,7 @@ const About = () => {
                     alt={items.skill_image}
                     className="skill-image"
                   />
-                  <div className=" d-flex flex-column  justify-content-center align-items-center">
+                  <div className=" d-flex flex-column  justify-content-center align-items-center mt-3">
                     <h4 className="skill-title">{items.skill_title}</h4>
                   </div>
                 </div>

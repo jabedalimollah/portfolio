@@ -5,7 +5,7 @@ import { IoIosLock } from "react-icons/io";
 
 import { ImDownload2 } from "react-icons/im";
 import { useSelector } from "react-redux";
-let userName = "sharifali";
+let userName = "jabedali";
 let myPassword = "admin123";
 const DownloadForm = ({ closeDownloadFormButton }) => {
   const [inputbox, setInputBox] = useState({
@@ -131,8 +131,10 @@ const DownloadForm = ({ closeDownloadFormButton }) => {
                       ) : (
                         <button className="download-cv-button ">
                           <a
-                            href="../Resume/Jabed Ali Mollah Resume.pdf"
-                            download="Jabed Ali Mollah Resume"
+                            href="https://github.com/jabedalimollah"
+                            target="_blank"
+                            // href="../Resume/Jabed Ali Mollah Resume.pdf"
+                            // download="Jabed Ali Mollah Resume"
                             // className="download-cv-link"
                             className={`download-cv-link ${
                               theme
