@@ -54,5 +54,13 @@
     "live_button": "https://notebook7.netlify.app/",
     "github": "https://github.com/jabedalimollah/notebook",
     "project_info": "Tech:- React JS, Redux, React-Router-dom, Javascript, Bootstrap, React Icons and CSS3."
+  },
+  {
+    "id": 8,
+    "project_name": "Chatit",
+    "project_image": "/images/chatit.png",
+    "live_button": "https://chatit7.netlify.app/",
+    "github": "https://github.com/jabedalimollah/chatit",
+    "project_info": "Tech:- React JS, Redux, React-Router-dom, Javascript, Bootstrap, React Icons and CSS3."
   }
 ]

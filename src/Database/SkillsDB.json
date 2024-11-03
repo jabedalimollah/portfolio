@@ -88,5 +88,10 @@
     "id": 18,
     "skill_image": "../images/typescript.png",
     "skill_title": "Typescript"
+  },
+  {
+    "id": 19,
+    "skill_image": "../images/socket.png",
+    "skill_title": "Socket"
   }
 ]

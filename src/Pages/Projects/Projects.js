@@ -7,6 +7,7 @@ import ProjectDB from "../../Database/ProjectDB.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useSelector } from "react-redux";
+let reverse = ProjectDB.reverse();
 const Projects = () => {
   const [infoButton, setInfoButton] = useState();
   const [data, setData] = useState([]);
@@ -14,8 +15,9 @@ const Projects = () => {
   const getInfoHandle = (index) => {
     setInfoButton(index);
   };
+
   useEffect(() => {
-    setData(ProjectDB);
+    setData(reverse);
     AOS.init();
   }, []);
 
