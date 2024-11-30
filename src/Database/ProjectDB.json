@@ -62,5 +62,13 @@
     "live_button": "https://chatit7.netlify.app/",
     "github": "https://github.com/jabedalimollah/chatit",
     "project_info": "Tech:- React JS, Redux, React-Router-dom, Javascript, Bootstrap, React Icons and CSS3."
+  },
+  {
+    "id": 9,
+    "project_name": "Aliet",
+    "project_image": "/images/aliet.png",
+    "live_button": "https://youtu.be/pdyayBR9mLI?si=tQbXg8tOTe7wEY9u",
+    "github": "https://github.com/jabedalimollah/aliet",
+    "project_info": "Tech:- React JS, Redux, React-Router-dom, Javascript, Bootstrap, React Icons and CSS3."
   }
 ]
