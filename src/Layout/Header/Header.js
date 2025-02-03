@@ -5,8 +5,9 @@ import { FaUserAlt } from "react-icons/fa";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { FaSun } from "react-icons/fa";
 import { BsFillMoonFill } from "react-icons/bs";
+import { IoMdSunny } from "react-icons/io";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-
+import { RiMoonClearFill } from "react-icons/ri";
 import { ImAddressBook } from "react-icons/im";
 import "./Header.css";
 import Logo from "../../images/logo.png";
@@ -90,9 +91,11 @@ const Header = () => {
               onClick={handleTheme}
             >
               {theme ? (
-                <FaSun className="sun" />
+                // <FaSun className="sun" />
+                <IoMdSunny className="sun" />
               ) : (
-                <BsFillMoonStarsFill className="moon" />
+                // <BsFillMoonStarsFill className="moon" />
+                <RiMoonClearFill className="moon" />
                 // <BsFillMoonFill className="moon" />
               )}
             </button>

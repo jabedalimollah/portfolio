@@ -70,5 +70,13 @@
     "live_button": "https://youtu.be/pdyayBR9mLI?si=tQbXg8tOTe7wEY9u",
     "github": "https://github.com/jabedalimollah/aliet",
     "project_info": "Tech:- React JS, Redux, React-Router-dom, Javascript, Bootstrap, React Icons and CSS3."
+  },
+  {
+    "id": 10,
+    "project_name": "Next JS - Portfolio",
+    "project_image": "/images/nextjs_portfolio.png",
+    "live_button": "https://jabedalimollah.vercel.app/",
+    "github": "https://github.com/jabedalimollah/nextjs-portfolio",
+    "project_info": "Tech:-Next JS, Redux, shadcn ui, Javascript, Tailwinds, React Icons and CSS3."
   }
 ]
